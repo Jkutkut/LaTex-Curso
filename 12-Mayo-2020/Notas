@@ -1,0 +1,58 @@
+
+Profesor: Yago González (Delegado de la escuela)
+
+12 Mayo: 1h + 2 ejercicios
+    Luego, hacer:
+        -Teoria
+        -Ejercicio práctico
+15 Mayo: 1,5h
+19 Mayo: 0,5h
+
+
+Créditos:
+Si haces Bloques 1 y 2, -> 0,5 ects
+TODO -> 1 ects
+
+Cómo?
+Sacar +70% de preguntas + entregable bien hecho
+
+Profesores que llevan esto
+    -Santiago iglesias
+    -Alvaro gutierrez
+
+---------------------------------------------------
+## LaTex:
+Sistema de conposición de textos de alta calidad topográfica.
+
+## Cómo funciona:
+
+file.tex --> (Compilador) TeX Live --> Documento PDF
+
+### Problema:
+- [x] Curva de aprendizaje dura
+- [ ] 
+
+
+### Ventaja:
+- [x] Multiplataforma (no problema de imágenes mal puestas...)
+
+
+Curioso: TeX de LaTeX son letras griegas => X es en verdad una j => decir Latejjj
+Qué es Tex? 1978 -> Latex 1985
+
+
+
+## Usamos LaTeX2 y Overleaf!!!!
+
+-------------------------------------------
+
+## Cómo funciona:
+
+
+usamos \ para empezar comando, {}, []
+% para comentar
+OJO!!! Latex no le importa los márgenes!
+
+
+
+
