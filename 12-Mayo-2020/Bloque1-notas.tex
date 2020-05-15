@@ -1,0 +1,183 @@
+\documentclass[11]{article} % Documento tipo articulo, con fuente por defecto de 11pt
+\usepackage[utf8]{inputenc} % Uso de carateres utf-8
+\usepackage[T1]{fontenc} % Usa fuentes "ricas", que facilitan el copy-paste en la salida
+\usepackage{xcolor}
+\usepackage{float}
+
+% para meter ecuaciones
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+\usepackage[spanish]{babel} %cambia todos los textos auto al español
+\usepackage{svg}
+
+
+\title{Bloque1-primera prueba}
+\author{jorgeregonzalezetsit }
+\date{May 2020}
+
+\begin{document}
+
+\maketitle
+
+% section hace trozos que llamas como quieras
+\section{Introducción}
+cosas que cuento en la introducción
+
+\section{Segunda parte}
+Se van numerando de manera automática
+
+%Modificar el texto:
+\textbf{texto en negrita} \textit{texto en cursiva} \textsl{suave}
+\uppercase{ohhoafh} \texttt{kfjañlfajñklfjlñ}
+
+% Bloques o grupos
+% las llaves {} son como () en matemáticas
+
+{\small Texto con llaves que contiene las propiedades que hemos puesto}
+
+%tamaño de fuente personalizado:
+{\fontsize{56}{60}\selectfont personalizado}
+
+%Cambio de color:
+% no vienen por defecto en latex (xcolor package):
+
+puedes colorear lo que quieras,{\color{red}\huge hola en color rojo}, ya que está entre llaves. También {\colorbox{orange}{texto que uso}}
+
+%Crear colores
+\definecolor{rojo_guay}{RGB}{255,100,0}
+{\color{rojo_guay} jofajfoa}
+
+
+% Entornos:
+% Tiene distintos commandos, normas...
+% para hacer listas...
+
+%init entorno
+\begin{itemize}
+    \item primer elemento
+    \item segundo
+    \item tercero
+\end{itemize}
+
+%Lista ordenada:
+{\color{rojo_guay}
+\begin{enumerate}
+    \item primer
+    \item segun
+    \item tercer
+\end{enumerate}
+}
+
+% Listas anidadas:
+\begin{enumerate}
+    \item tiene 2 partes:
+    \begin{itemize}
+        \item 1
+        \item 2
+        \item ...
+    \end{itemize}
+    \item otra
+\end{enumerate}
+
+%Salto de línea
+dejar una línea en blanco
+
+sigo aquí
+
+%forzar salto de página:
+\newpage
+
+% ------------------------------------------------------
+
+\section{\huge Ecuaciones:}
+
+%ecuaciones en línea : usando $$
+Pitágoras: $a^2 +b ^2 = c^ 2$
+
+%bloques de ecuaciones: Usando entornos
+\begin{equation}
+% Subindice: _
+% Super indice: ^
+    \sum_{k=1}^{\infty} = 1 + \frac{a + e}{f-5} + \sqrt{urn}
+\end{equation}
+
+\begin{equation}
+    %integral de contorno con \oint
+    \oint_{c}
+\end{equation}
+
+\begin{equation}
+    \int_a^b \vec B \cdot d \vec l + \partial l
+\end{equation}
+
+\subsection{El entorno \texttt{gather}:}
+
+
+% el * es para que no salga la referencia
+\begin{gather*}
+    a + b + c
+    esto está en la misma línea
+\end{gather*}
+
+\subsection{entorno \texttt{aling}}
+
+% ahora el * centra el texto
+\begin{align*}
+    b &= \mathdf{hola}\\
+    a &= otra cosa
+\end{align*}
+
+
+\subsection{Matrices}
+
+%usamos otro entorno:
+
+\begin{equation}
+    \label{ecuacion a}
+    \begin{bmatrix}
+    a & b \\
+    c & d 
+    \end{bmatrix}
+\end{equation}
+
+\newpage
+\section{Imagenes:}
+% Latex crea las cosas de manera vectorial, por tanto puedes hacer el zoom que quieras
+
+\begin{figure}[H]
+%Ojo, la planta donde le apetece. Para arreglarlo, usar [H]
+    \centering
+    \includegraphics[height=3cm]{LOGOTIPO leyenda color JPG p.png}
+    \caption{Caption}
+    \label{fig:logo de la ETSIT}
+\end{figure}
+
+\begin{figure}[H]
+%Ojo, la planta donde le apetece. Para arreglarlo, usar [H]
+    \centering
+    % ajuste porcentual
+    \includegraphics[width=0.75\textwidth]{LOGOTIPO leyenda color JPG p.png}
+    \caption{Caption}
+    \label{fig:logo de la ETSIT}
+\end{figure}
+
+\begin{figure}[H]
+%Ojo, la planta donde le apetece. Para arreglarlo, usar [H]
+    \centering
+    % ajuste porcentual
+    \includegraphics[width=0.75\textwidth,trim{4cm,0cm,0cm,0cm}]{LOGOTIPO leyenda color JPG p.png}
+    \caption{Caption}
+    \label{fig:logo de la ETSIT}
+\end{figure}
+
+% OJOOOOO! .svg no está soportado de manera nativa, usar paquete
+
+\section{referencias internas}
+\label{section: cosa}
+
+en la \ref{ecuacion a} ecuacion 1 hemos puesto la cosa hdalkfhallkjfal. Como igual cambiamos estas ecuaciones de orden, usamos el command label
+
+otra referencia \ref{section: cosa}
+
+\end{document}
